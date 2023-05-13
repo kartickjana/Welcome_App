@@ -4,14 +4,17 @@ import './index.css'
 
 class Welcome extends Component {
   state = {isLogin: false}
+  
   onSubscribe = () => {
     this.setState(prevState => ({isLogin: !prevState.isLogin}))
   }
+  
   getButtonText = () => {
     const {isLogin} = this.state
 
     return isLogin ? 'Subscribed' : 'Subscribe'
   }
+  
   render() {
     const buttonText = this.getButtonText()
     return (
